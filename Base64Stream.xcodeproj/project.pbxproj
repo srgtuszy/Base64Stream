@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		424922901A40661B004A0447 /* Base64Stream.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4249228F1A40661B004A0447 /* Base64Stream.h */; };
-		424922921A40661B004A0447 /* Base64Stream.m in Sources */ = {isa = PBXBuildFile; fileRef = 424922911A40661B004A0447 /* Base64Stream.m */; };
 		424922981A40661B004A0447 /* libBase64Stream.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4249228C1A40661B004A0447 /* libBase64Stream.a */; };
+		424922A81A4091D7004A0447 /* MTBase64InputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 424922A71A4091D7004A0447 /* MTBase64InputStream.m */; };
+		EF0A4ADFB1169EED6AA9F2EC /* MTBase64InputStreamTest.m in Sources */ = {isa = PBXBuildFile; fileRef = EF0A426FA7E33B5836160E58 /* MTBase64InputStreamTest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,7 +29,6 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
-				424922901A40661B004A0447 /* Base64Stream.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -37,10 +36,11 @@
 
 /* Begin PBXFileReference section */
 		4249228C1A40661B004A0447 /* libBase64Stream.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBase64Stream.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		4249228F1A40661B004A0447 /* Base64Stream.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Base64Stream.h; sourceTree = "<group>"; };
-		424922911A40661B004A0447 /* Base64Stream.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Base64Stream.m; sourceTree = "<group>"; };
 		424922971A40661B004A0447 /* Base64StreamTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Base64StreamTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4249229D1A40661B004A0447 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		424922A61A4091D7004A0447 /* MTBase64InputStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTBase64InputStream.h; sourceTree = "<group>"; };
+		424922A71A4091D7004A0447 /* MTBase64InputStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTBase64InputStream.m; sourceTree = "<group>"; };
+		EF0A426FA7E33B5836160E58 /* MTBase64InputStreamTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTBase64InputStreamTest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,8 +83,8 @@
 		4249228E1A40661B004A0447 /* Base64Stream */ = {
 			isa = PBXGroup;
 			children = (
-				4249228F1A40661B004A0447 /* Base64Stream.h */,
-				424922911A40661B004A0447 /* Base64Stream.m */,
+				424922A61A4091D7004A0447 /* MTBase64InputStream.h */,
+				424922A71A4091D7004A0447 /* MTBase64InputStream.m */,
 			);
 			path = Base64Stream;
 			sourceTree = "<group>";
@@ -93,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				4249229C1A40661B004A0447 /* Supporting Files */,
+				EF0A426FA7E33B5836160E58 /* MTBase64InputStreamTest.m */,
 			);
 			path = Base64StreamTests;
 			sourceTree = "<group>";
@@ -193,7 +194,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				424922921A40661B004A0447 /* Base64Stream.m in Sources */,
+				424922A81A4091D7004A0447 /* MTBase64InputStream.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,6 +202,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF0A4ADFB1169EED6AA9F2EC /* MTBase64InputStreamTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

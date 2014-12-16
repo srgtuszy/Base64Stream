@@ -1,13 +1,13 @@
 //
-//  Base64Stream.m
+//  MTBase64InputStream.h
 //  Base64Stream
 //
 //  Created by Michał Tuszyński on 16/12/14.
 //  Copyright (c) 2014 iapp. All rights reserved.
 //
 
-#import "Base64Stream.h"
+#import <Foundation/Foundation.h>
 
-@implementation Base64Stream
+@interface MTBase64InputStream : NSInputStream
 
 @end
