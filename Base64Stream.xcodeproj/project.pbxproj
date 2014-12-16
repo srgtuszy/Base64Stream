@@ -1,0 +1,371 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		424922901A40661B004A0447 /* Base64Stream.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4249228F1A40661B004A0447 /* Base64Stream.h */; };
+		424922921A40661B004A0447 /* Base64Stream.m in Sources */ = {isa = PBXBuildFile; fileRef = 424922911A40661B004A0447 /* Base64Stream.m */; };
+		424922981A40661B004A0447 /* libBase64Stream.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4249228C1A40661B004A0447 /* libBase64Stream.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		424922991A40661B004A0447 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 424922841A40661B004A0447 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4249228B1A40661B004A0447;
+			remoteInfo = Base64Stream;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4249228A1A40661B004A0447 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				424922901A40661B004A0447 /* Base64Stream.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		4249228C1A40661B004A0447 /* libBase64Stream.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBase64Stream.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		4249228F1A40661B004A0447 /* Base64Stream.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Base64Stream.h; sourceTree = "<group>"; };
+		424922911A40661B004A0447 /* Base64Stream.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Base64Stream.m; sourceTree = "<group>"; };
+		424922971A40661B004A0447 /* Base64StreamTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Base64StreamTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4249229D1A40661B004A0447 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		424922891A40661B004A0447 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		424922941A40661B004A0447 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				424922981A40661B004A0447 /* libBase64Stream.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		424922831A40661B004A0447 = {
+			isa = PBXGroup;
+			children = (
+				4249228E1A40661B004A0447 /* Base64Stream */,
+				4249229B1A40661B004A0447 /* Base64StreamTests */,
+				4249228D1A40661B004A0447 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4249228D1A40661B004A0447 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4249228C1A40661B004A0447 /* libBase64Stream.a */,
+				424922971A40661B004A0447 /* Base64StreamTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4249228E1A40661B004A0447 /* Base64Stream */ = {
+			isa = PBXGroup;
+			children = (
+				4249228F1A40661B004A0447 /* Base64Stream.h */,
+				424922911A40661B004A0447 /* Base64Stream.m */,
+			);
+			path = Base64Stream;
+			sourceTree = "<group>";
+		};
+		4249229B1A40661B004A0447 /* Base64StreamTests */ = {
+			isa = PBXGroup;
+			children = (
+				4249229C1A40661B004A0447 /* Supporting Files */,
+			);
+			path = Base64StreamTests;
+			sourceTree = "<group>";
+		};
+		4249229C1A40661B004A0447 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4249229D1A40661B004A0447 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4249228B1A40661B004A0447 /* Base64Stream */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 424922A01A40661B004A0447 /* Build configuration list for PBXNativeTarget "Base64Stream" */;
+			buildPhases = (
+				424922881A40661B004A0447 /* Sources */,
+				424922891A40661B004A0447 /* Frameworks */,
+				4249228A1A40661B004A0447 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Base64Stream;
+			productName = Base64Stream;
+			productReference = 4249228C1A40661B004A0447 /* libBase64Stream.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		424922961A40661B004A0447 /* Base64StreamTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 424922A31A40661B004A0447 /* Build configuration list for PBXNativeTarget "Base64StreamTests" */;
+			buildPhases = (
+				424922931A40661B004A0447 /* Sources */,
+				424922941A40661B004A0447 /* Frameworks */,
+				424922951A40661B004A0447 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4249229A1A40661B004A0447 /* PBXTargetDependency */,
+			);
+			name = Base64StreamTests;
+			productName = Base64StreamTests;
+			productReference = 424922971A40661B004A0447 /* Base64StreamTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		424922841A40661B004A0447 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = iapp;
+				TargetAttributes = {
+					4249228B1A40661B004A0447 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					424922961A40661B004A0447 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+				};
+			};
+			buildConfigurationList = 424922871A40661B004A0447 /* Build configuration list for PBXProject "Base64Stream" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 424922831A40661B004A0447;
+			productRefGroup = 4249228D1A40661B004A0447 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4249228B1A40661B004A0447 /* Base64Stream */,
+				424922961A40661B004A0447 /* Base64StreamTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		424922951A40661B004A0447 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		424922881A40661B004A0447 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				424922921A40661B004A0447 /* Base64Stream.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		424922931A40661B004A0447 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4249229A1A40661B004A0447 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4249228B1A40661B004A0447 /* Base64Stream */;
+			targetProxy = 424922991A40661B004A0447 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		4249229E1A40661B004A0447 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		4249229F1A40661B004A0447 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		424922A11A40661B004A0447 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		424922A21A40661B004A0447 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		424922A41A40661B004A0447 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = Base64StreamTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		424922A51A40661B004A0447 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = Base64StreamTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		424922871A40661B004A0447 /* Build configuration list for PBXProject "Base64Stream" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4249229E1A40661B004A0447 /* Debug */,
+				4249229F1A40661B004A0447 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		424922A01A40661B004A0447 /* Build configuration list for PBXNativeTarget "Base64Stream" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				424922A11A40661B004A0447 /* Debug */,
+				424922A21A40661B004A0447 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		424922A31A40661B004A0447 /* Build configuration list for PBXNativeTarget "Base64StreamTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				424922A41A40661B004A0447 /* Debug */,
+				424922A51A40661B004A0447 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 424922841A40661B004A0447 /* Project object */;
+}
