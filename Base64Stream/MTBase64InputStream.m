@@ -8,7 +8,8 @@
 
 #import "MTBase64InputStream.h"
 
-static const NSUInteger kDefaultBufferLength = 512;
+static const NSUInteger kDefaultBufferLength = 684;
+static const NSUInteger kDefaultLength = 513;
 static const NSInteger kPaddingTable[3] = {0, 2, 1};
 static const char *kBase64Table = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
 
@@ -93,21 +94,25 @@ static const char *kBase64Table = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrs
 }
 
 - (BOOL)hasBytesAvailable {
-    return (self.index < self.inputBytes + self.padding);
+    return (self.state == MTBase64InputStreamStateOpen && (self.index < self.inputBytes + self.padding));
 }
 
 - (NSInteger)read:(uint8_t *)buffer maxLength:(NSUInteger)len {
     NSAssert(self.state == MTBase64InputStreamStateOpen, @"Cannot read from a closed stream");
     NSAssert(sizeof(buffer) / sizeof(uint8_t) % 4 == 0, @"Buffer size not dividable by 4");
-    NSAssert(len % 4 == 0, @"Max length must be divisable by 4");
+    NSAssert(len % 3 == 0, @"Max length must be divisable by 3");
     if (self.state == MTBase64InputStreamStateClosed) return -1;
+    [self.fileHandle seekToFileOffset:self.index];
     NSData *data = [self.fileHandle readDataOfLength:len];
     NSUInteger bytesRead = data.length;
     NSInteger bytesToRead = 0;
     NSUInteger bufferIndex = 0;
-    while (self.index < bytesRead) {
-        bytesToRead = MIN(3, bytesRead - self.index); //Either 3 or remaining bytes
-        [data getBytes:self.temporaryBuffer range:NSMakeRange(self.index, bytesToRead)];
+    NSUInteger stop = self.index + bytesRead;
+    NSUInteger dataIndex = 0;
+    while (self.index < stop) {
+        bytesToRead = MIN(3, stop - self.index); //Either 3 or remaining bytes
+        [data getBytes:self.temporaryBuffer range:NSMakeRange(dataIndex, bytesToRead)];
+        dataIndex += bytesToRead;
         unsigned char byte1 = self.temporaryBuffer[0], byte2 = self.temporaryBuffer[1], byte3 = self.temporaryBuffer[2];
         if (bytesToRead == 3) {
             buffer[bufferIndex]       = (uint8_t) kBase64Table[(byte1 >> 2) & 0x3F];
@@ -132,7 +137,7 @@ static const char *kBase64Table = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrs
             }
         }
         self.index += bytesToRead;
-        if (self.index >= self.inputBytes - 1) {
+        if (self.index >= self.inputBytes) {
             for (NSInteger j = 0; j < self.padding; j++) {
                 buffer[bufferIndex] = '=';
                 bufferIndex++;
@@ -144,7 +149,7 @@ static const char *kBase64Table = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrs
 }
 
 - (BOOL)getBuffer:(uint8_t **)buffer length:(NSUInteger *)len {
-    *len = kDefaultBufferLength;
+    *len = kDefaultLength;
     *buffer = malloc(kDefaultBufferLength * sizeof(uint8_t));
     return YES;
 }

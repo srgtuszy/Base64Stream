@@ -1,5 +1,5 @@
 //
-//  StringTests.m
+//  StringTest.m
 //  Base64Stream
 //
 //  Created by Michał Tuszyński on 16/12/14.
@@ -10,19 +10,19 @@
 #import <XCTest/XCTest.h>
 #import "MTBase64InputStream.h"
 
-@interface StringTests : XCTestCase
+@interface StringTest : XCTestCase
 
 @property (strong, nonatomic) NSArray *testData;
 
 @end
 
-@implementation StringTests
+@implementation StringTest
 
 #pragma mark - XCTest
 
 - (void)setUp {
     [super setUp];
-    NSString *testDataPath = [[NSBundle bundleForClass:[self class]] pathForResource:@"InputData"
+    NSString *testDataPath = [[NSBundle bundleForClass:[self class]] pathForResource:@"InputStrings"
                                                                               ofType:@"plist"];
     self.testData = [NSArray arrayWithContentsOfFile:testDataPath];
 }
@@ -30,7 +30,7 @@
 #pragma mark - Tests
 
 - (void)testEncodingStringsFromUrl {
-    NSUInteger bufferSize = 512;
+    NSUInteger bufferSize = 513;
     NSInteger index = 0;
     NSFileManager *fileManager = [NSFileManager defaultManager];
     NSURL *url = [NSURL fileURLWithPath:[NSTemporaryDirectory() stringByAppendingPathComponent:@"test_file"]];

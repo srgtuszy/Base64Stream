@@ -9,8 +9,13 @@
 /* Begin PBXBuildFile section */
 		424922981A40661B004A0447 /* libBase64Stream.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4249228C1A40661B004A0447 /* libBase64Stream.a */; };
 		424922A81A4091D7004A0447 /* MTBase64InputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 424922A71A4091D7004A0447 /* MTBase64InputStream.m */; };
-		EF0A40D2D3B0E782D1251DE4 /* InputData.plist in Resources */ = {isa = PBXBuildFile; fileRef = EF0A4FE5930279C6851AA80A /* InputData.plist */; };
-		EF0A4ADFB1169EED6AA9F2EC /* StringTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EF0A426FA7E33B5836160E58 /* StringTests.m */; };
+		424E3C1E1A59D3980089F342 /* iphone_photo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 424E3C1D1A59D3980089F342 /* iphone_photo.jpg */; };
+		EF0A40D2D3B0E782D1251DE4 /* InputStrings.plist in Resources */ = {isa = PBXBuildFile; fileRef = EF0A4FE5930279C6851AA80A /* InputStrings.plist */; };
+		EF0A44A44231B2BB0D5C17C1 /* InputImages.plist in Resources */ = {isa = PBXBuildFile; fileRef = EF0A4F27D541141F6E370332 /* InputImages.plist */; };
+		EF0A45E7686BA13090190E1F /* rainbow.png in Resources */ = {isa = PBXBuildFile; fileRef = EF0A42154E1383085F3CFAAD /* rainbow.png */; };
+		EF0A4ADFB1169EED6AA9F2EC /* StringTest.m in Sources */ = {isa = PBXBuildFile; fileRef = EF0A426FA7E33B5836160E58 /* StringTest.m */; };
+		EF0A4C87938B861A39AC127F /* balls.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EF0A405DD010D9666CD5BCDB /* balls.jpg */; };
+		EF0A4FDF4CFB96422B8DC0AA /* ImageTest.m in Sources */ = {isa = PBXBuildFile; fileRef = EF0A41BE820FE1FB4D34FC12 /* ImageTest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,8 +46,13 @@
 		4249229D1A40661B004A0447 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		424922A61A4091D7004A0447 /* MTBase64InputStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTBase64InputStream.h; sourceTree = "<group>"; };
 		424922A71A4091D7004A0447 /* MTBase64InputStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTBase64InputStream.m; sourceTree = "<group>"; };
-		EF0A426FA7E33B5836160E58 /* StringTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StringTests.m; sourceTree = "<group>"; };
-		EF0A4FE5930279C6851AA80A /* InputData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = InputData.plist; sourceTree = "<group>"; };
+		424E3C1D1A59D3980089F342 /* iphone_photo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = iphone_photo.jpg; sourceTree = "<group>"; };
+		EF0A405DD010D9666CD5BCDB /* balls.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = balls.jpg; sourceTree = "<group>"; };
+		EF0A41BE820FE1FB4D34FC12 /* ImageTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageTest.m; sourceTree = "<group>"; };
+		EF0A42154E1383085F3CFAAD /* rainbow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rainbow.png; sourceTree = "<group>"; };
+		EF0A426FA7E33B5836160E58 /* StringTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StringTest.m; sourceTree = "<group>"; };
+		EF0A4F27D541141F6E370332 /* InputImages.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = InputImages.plist; sourceTree = "<group>"; };
+		EF0A4FE5930279C6851AA80A /* InputStrings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = InputStrings.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +105,8 @@
 			isa = PBXGroup;
 			children = (
 				4249229C1A40661B004A0447 /* Supporting Files */,
-				EF0A426FA7E33B5836160E58 /* StringTests.m */,
+				EF0A426FA7E33B5836160E58 /* StringTest.m */,
+				EF0A41BE820FE1FB4D34FC12 /* ImageTest.m */,
 			);
 			path = Base64StreamTests;
 			sourceTree = "<group>";
@@ -103,10 +114,22 @@
 		4249229C1A40661B004A0447 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				EF0A4FE5930279C6851AA80A /* InputData.plist */,
+				EF0A4FE5930279C6851AA80A /* InputStrings.plist */,
 				4249229D1A40661B004A0447 /* Info.plist */,
+				EF0A4F27D541141F6E370332 /* InputImages.plist */,
+				EF0A4B2055FB28458EEF86B0 /* images */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EF0A4B2055FB28458EEF86B0 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				424E3C1D1A59D3980089F342 /* iphone_photo.jpg */,
+				EF0A405DD010D9666CD5BCDB /* balls.jpg */,
+				EF0A42154E1383085F3CFAAD /* rainbow.png */,
+			);
+			name = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,7 +210,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF0A40D2D3B0E782D1251DE4 /* InputData.plist in Resources */,
+				424E3C1E1A59D3980089F342 /* iphone_photo.jpg in Resources */,
+				EF0A40D2D3B0E782D1251DE4 /* InputStrings.plist in Resources */,
+				EF0A44A44231B2BB0D5C17C1 /* InputImages.plist in Resources */,
+				EF0A4C87938B861A39AC127F /* balls.jpg in Resources */,
+				EF0A45E7686BA13090190E1F /* rainbow.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,7 +233,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF0A4ADFB1169EED6AA9F2EC /* StringTests.m in Sources */,
+				EF0A4ADFB1169EED6AA9F2EC /* StringTest.m in Sources */,
+				EF0A4FDF4CFB96422B8DC0AA /* ImageTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
