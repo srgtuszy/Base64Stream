@@ -14,29 +14,19 @@
 
 #import <Foundation/Foundation.h>
 
-typedef NS_ENUM(NSInteger, MTBase64InputStreamState) {
-    MTBase64InputStreamStateClosed = 0,
-    MTBase64InputStreamStateOpen
+FOUNDATION_EXPORT NSString *const MTBase64InputStreamError;
+FOUNDATION_EXPORT NSString *const MTBase64InputStreamErrorReason;
+
+typedef NS_ENUM(NSInteger, MTBase64InputStreamErrorCode) {
+    MTBase64InputStreamErrorUnknown = 0,
+    MTBase64InputStreamFileError = 1
 };
 
+/**
+* An NSInputStream subclass which encodes input to base64 format on the fly in order to prevent
+* loading the entire input into memory if there is a risk of exceeding memory threshold and/or there is a need
+* to track the progress of the decoding.
+*/
 @interface MTBase64InputStream : NSInputStream
-
-/**
- Creates a closed input stream with from a url which points to a file present
- on the local file system
- @param url a file url which points to an existing file
- @return NSInputStream instance
- */
-- (instancetype)initWithURL:(NSURL *)url;
-
-/**
- Creates a closed input stream with from a path which points to a file present
- on the local file system
- @param path absolute path to an existing file
- @return NSInputStream instance
- */
-- (instancetype)initWithFileAtPath:(NSString *)path;
-
-@property (assign, nonatomic, readonly) MTBase64InputStreamState state;
 
 @end
