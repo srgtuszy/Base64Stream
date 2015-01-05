@@ -77,7 +77,7 @@ static const char *kBase64Table = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrs
                                      userInfo:nil];
     }
     self.index = 0;
-    self.temporaryBuffer = malloc(2 * sizeof(unsigned char));
+    self.temporaryBuffer = malloc(3 * sizeof(unsigned char));
     self.inputBytes = [attributes[NSFileSize] unsignedIntegerValue];
     self.fileHandle = [NSFileHandle fileHandleForReadingAtPath:self.filePath];
     self.padding = kPaddingTable[self.inputBytes % 3];
