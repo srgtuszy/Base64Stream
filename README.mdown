@@ -1,0 +1,48 @@
+## MTBase64InputStream
+v0.0.1
+
+### 1. Description
+
+`MTBase64InputStream` is a subclass of `NSInputStream` which encodes files to `base64` format on the fly, removing
+the need to store large files in memory just to do that.
+
+### 2. Purpose
+
+Apple provides no built-in way to handle encoding and decoding large files to `base64` format. While it provides a
+nice interface to handle encoding and decoding, it requires clients to load the file into memory to do that and if
+the client needs to do such operations on a large file, there is no way to track progress or prevent application from
+crashing under memory pressure. `MTBase64InputStream`'s goal is to provide such api while conforming to `NSStream` 
+lifecycle
+
+### 3. Usage
+
+Since `MTBase64InputStream` inherits from `NSInputStream`, it should be used as one. When creating buffers, please
+keep in mind that after encoding a file to `base64` format, the output file will take a larger amount of space, therefore
+input buffer needs to be sufficiently larger that the maximum length when using `read:maxLength:` method. 
+`getBuffer:length:` method will handle creating a proper buffer for you. The most simple usage in order to encode
+a file present at a given url would be:
+
+```objc
+  NSInteger length, bufferSize //Assume these exist
+  NSInputStream *inputStream = [[MTBase64InputStream alloc] initWithURL:aURL];
+  [inputStream open];
+  uint8_t *buffer = malloc(bufferSize * sizeof(uint8_t));
+  while ([inputStream hasBytesAvailable]) {
+    NSInteger bytesRead = [inputStream read:buffer maxLength:length];
+    //Do something with the data
+  }
+  [inputStream close];
+```
+
+Please refer to the unit tests for more examples.
+
+### 4. License
+
+`MTBase64InputStream` is under Apache 2 license, therefore you are free to use it in commercial or non-commercial projects.
+See the LICENSE file for details
+
+### 5. TODO
+
+- Add cocoapods support
+
+- Write tests verifying `NSStream` lifecycle
