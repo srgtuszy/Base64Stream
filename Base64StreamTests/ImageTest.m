@@ -38,7 +38,7 @@
         while ([inputStream hasBytesAvailable]) {
             NSInteger bytesRead = [inputStream read:buffer maxLength:513];
             [outputData appendBytes:buffer length:bytesRead];
-         }
+        }
         NSLog(@"Done!");
         [inputStream close];
         free(buffer);
