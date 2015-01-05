@@ -162,7 +162,7 @@ static const char *kBase64Table = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrs
     NSInteger bytesToRead = 0;
     NSUInteger bufferIndex = 0;
     NSUInteger stop = self.index + bytesRead;
-    NSUInteger dataIndex = 0;
+    NSUInteger dataIndex = 0; //TODO Is this variable necessary?
     while (self.index < stop) {
         //Read 3 or less bytes from the chunk
         bytesToRead = MIN(3, stop - self.index); //Either 3 or remaining bytes
